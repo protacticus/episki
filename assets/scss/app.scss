@@ -1,0 +1,584 @@
+// setting the value of this variable to an empty data URL is the only working solution
+// to load the Bootswatch web fonts locally and avoid loading them from Google servers
+// see https://github.com/thomaspark/bootswatch/issues/55#issuecomment-298093182
+$web-font-path: 'data:text/css;base64,';
+
+//@import "~bootswatch/flatly/variables";
+@import "variables";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+@import "~bootswatch/flatly/bootswatch";
+@import "~font-awesome/scss/font-awesome.scss";
+@import "~highlight.js/styles/solarized-light.css";
+//@import "bootstrap-tagsinput.scss";
+
+// pick the Lato fonts individually to avoid importing the entire font family
+//@import '~lato-font/scss/public-api';
+//@include lato-include-font('normal');
+//@include lato-include-font('bold');
+
+/* Overrides
+   ------------------------------------------------------------------------- */
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+#navsidebar {
+    width: 300px;
+    position: fixed;
+    top: 0;
+    left: -300px;
+    height: 100vh;
+    z-index: 1050;
+    background-color: $navsidebar-background-color;
+    color: #fff;
+    transition: all 0.2s;
+    overflow-y: scroll;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+
+	.logo {
+    	height: 40px;
+		margin-top: 0.7em
+    }
+}
+
+#navsidebar.active {
+    left: 0;
+}
+
+#navsidebar .logo-right {
+	float: right !important;
+	margin-right: 15px;
+}
+
+.dismiss {
+	color: $brand-secondary;
+    cursor: pointer;
+//     padding-top: 20px;
+}
+
+.dismiss:hover {
+    color: darken($brand-secondary, 10);
+}
+
+.overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+    display: none;
+}
+
+#navsidebar .sidebar-header {
+    padding: 20px;
+    background: #6d7fcc;
+}
+
+#navsidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b;
+}
+
+#navsidebar .nav-item {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+#navsidebar .nav-pills > li + li {
+  margin-left: 0;
+}
+
+#navsidebar .nav-link {
+  border-radius: 0;
+  &:hover {
+      background-color: darken($navsidebar-background-color, 10%);
+    }
+}
+
+#navsidebar ul li.active > a, a[aria-expanded="true"] {
+    color: #fff;
+    background: #6d7fcc;
+}
+
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+/*
+a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
+    content: '\e259';
+    display: block;
+    position: absolute;
+    right: 20px;
+    font-family: 'Glyphicons Halflings';
+    font-size: 0.6em;
+}
+a[aria-expanded="true"]::before {
+    content: '\e260';
+}
+*/
+
+ul.CTAs {
+    padding: 20px;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+a.download {
+    background: #fff;
+    color: #7386D5;
+}
+
+.dropdown-menu li a {
+	color: #000;
+	padding: 10px;
+	&:hover {
+		background-color: $brand-secondary;
+	}
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+#content {
+    width: 100%;
+    min-height: 100vh;
+    transition: all 0.2s;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#content>.container-fluid {
+	margin: 2em;
+	h1 {
+    	margin-top: 0;
+  	}
+}
+
+
+/* Basic styles
+   ------------------------------------------------------------------------- */
+   
+.wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+.navbar {
+	border-radius: 0;
+	margin-bottom: 0;
+}
+
+.navbar-brand {
+	padding: 0em;
+	.logo {
+    	height: 40px;
+		margin-top: 0.6em
+    }
+} 
+
+/*
+.logo {
+	height: 40px;
+	margin-top: 0.7em
+}
+*/
+
+.login {
+	margin-top: 7%;
+}
+
+p, ul, ol {
+  font-size: 19px;
+  margin-bottom: 1.5em
+}
+
+code {
+  background: #ecf0f1;
+  color: #2c3e50
+}
+
+.text-danger, .text-danger:hover {
+  color: #e74c3c
+}
+
+i {
+  margin-right: 0.25em
+}
+
+.table.table-middle-aligned th,
+.table.table-middle-aligned td {
+  vertical-align: middle;
+}
+
+/* if using markdown, reset font size */
+table p,
+table ul {
+	font-size: 15px;
+}
+
+/* Fix action buttons */
+td .item-actions {
+	min-width: 10em;
+}
+
+.profile {
+	padding: 13px !important;
+}
+
+.notification:after{
+  position:absolute;
+  right: 8%;
+  top: 12%;
+  content: '\f111';
+  font-size: 60%;
+  padding: .6em;
+  color: $brand-danger;
+  font-family: 'FontAwesome';
+}
+
+/* Utilities
+   ------------------------------------------------------------------------- */
+.m-b-0 { margin-bottom: 0 }
+
+/* Fix the margin padding in the well on show views */
+.well, table {
+    p:last-of-type,
+    ul:last-of-type {
+        margin-bottom: 0px!important;
+    }
+}
+
+/* Page elements
+   ------------------------------------------------------------------------- */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+header {
+  margin-bottom: 2em
+}
+
+header ul.nav li {
+  margin-bottom: 0
+}
+
+header .locales a {
+  padding-right: 10px
+}
+
+.body-container {
+  flex: 1;
+  /* needed to prevent pages with a very small height and browsers not supporting flex */
+  min-height: 600px
+}
+
+.body-container #main h1, .body-container #main h2 {
+  margin-top: 0;
+}
+
+#sidebar .section {
+  margin-bottom: 2em
+}
+
+#sidebar p {
+  font-size: 15px
+}
+
+#sidebar p + p {
+  margin: 1.5em 0 0
+}
+
+footer {
+  //background: #222627;
+  margin-top: 2em;
+  padding-top: 2em;
+  padding-bottom: 2em
+}
+
+footer p {
+  color: #fff;
+  font-size: 13px;
+  margin-bottom: 0.25em
+}
+
+footer #footer-resources {
+  text-align: right
+}
+
+footer #footer-resources i {
+  color: #fff;
+  font-size: 28.5px;
+  margin-left: 0.5em
+}
+
+#sourceCodeModal h3 {
+  font-size: 19px;
+  margin-top: 0
+}
+
+#sourceCodeModal h3 small {
+  color: #7b8a8b;
+  font-size: 80%
+}
+
+#sourceCodeModal pre {
+  margin-bottom: 2em;
+  padding: 0
+}
+
+#confirmationModal .modal-dialog {
+  width: 500px
+}
+
+#confirmationModal .modal-footer button {
+  min-width: 75px
+}
+
+
+
+
+/* Forms
+   ------------------------------------------------------------------------- */
+.form-group.has-error .form-control {
+  border-color: #e74c3c
+}
+
+.form-group.has-error .control-label {
+  color: #e74c3c
+}
+
+.form-group.has-error .help-block {
+  background-color: #e74c3c;
+  color: #fff;
+  font-size: 15px;
+  padding: 1em
+}
+
+.form-group.has-error .help-block ul,
+.form-group.has-error .help-block li {
+  margin-bottom: 0
+}
+.form-group.has-error .help-block li + li {
+  margin-top: 0.5em;
+}
+
+textarea {
+  max-width: 100%
+}
+
+/* Page: 'Technical Requirements Checker'
+   ------------------------------------------------------------------------- */
+body#requirements_checker header h1 {
+  margin-bottom: 0;
+  margin-top: 0
+}
+
+body#requirements_checker header h1 span {
+  font-size: 120%;
+  opacity: 0.7;
+  padding: 0 5px
+}
+
+body#requirements_checker .panel li {
+  margin-bottom: 1em
+}
+
+/* Page: 'Homepage'
+   ------------------------------------------------------------------------- */
+body#homepage {
+  text-align: center
+}
+
+/* Page: 'Login'
+   ------------------------------------------------------------------------- */
+body#login {
+  background-color: $brand-primary;
+}
+
+body#login img.logo {
+	width: 250px;
+	padding-bottom: 10%;
+	display: block;
+    margin: auto;
+}
+
+body#login #login-users-help p {
+  font-size: 15px;
+  line-height: 1.42857
+}
+
+body#login #login-users-help p:last-child {
+  margin-bottom: 0
+}
+
+body#login #login-users-help p .label {
+  margin-right: 5px
+}
+
+body#login #login-users-help p .console {
+  display: block;
+  margin: 5px 0;
+  padding: 10px
+}
+
+/* Common Control page elements
+   ------------------------------------------------------------------------- */
+.post-metadata {
+  color: #b4bcc2;
+  font-size: 19px;
+  margin-bottom: 16px;
+}
+.post-metadata .metadata {
+  margin-right: 1.5em;
+}
+
+.post-tags .label {
+  margin-right: 5px;
+}
+
+.control-tags .label {
+  margin-right: 5px;
+  font-size: 17px;
+  background-color: $brand-primary;
+  font-weight: normal;
+  padding: .6em;
+}
+
+/* Page: 'Blog index'
+   ------------------------------------------------------------------------- */
+body#blog_index #main h1,
+body#blog_index #main p {
+  margin-bottom: 0.5em
+}
+
+body#blog_index article.post {
+  margin-bottom: 3em;
+}
+
+body#blog_index .post-metadata {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+body#blog_index .post-tags .label-default {
+  background-color: #e9ecec;
+  color: #6d8283;
+}
+body#blog_index .post-tags .label-default i {
+  color: #a3b2b2;
+}
+
+/* Page: 'Blog post show'
+   ------------------------------------------------------------------------- */
+body#blog_post_show #main h3 {
+  margin-bottom: 0.75em
+}
+
+body#blog_post_show .post-tags .label-default {
+  background-color: #e9ecec;
+  color: #6D8283;
+  font-size: 16px;
+  margin-right: 10px;
+  padding: .4em 1em .5em;
+}
+body#blog_post_show .post-tags .label-default i {
+  color: #95A6A7;
+}
+
+body#blog_post_show #post-add-comment {
+  margin: 2em 0
+}
+
+body#blog_post_show #post-add-comment p {
+  margin-bottom: 0
+}
+
+body#blog_post_show #post-add-comment p a.btn {
+  margin-right: 0.5em
+}
+
+body#blog_post_show .post-comment {
+  margin-bottom: 2em
+}
+
+body#blog_post_show .post-comment h4 {
+  font-size: 13px;
+  line-height: 1.42857;
+  margin-top: 0
+}
+
+body#blog_post_show .post-comment h4 strong {
+  display: block
+}
+
+/* Page: 'Comment form error'
+   ------------------------------------------------------------------------- */
+body#comment_form_error h1.text-danger {
+  margin-bottom: 1em
+}
+
+@media (min-width: 768px) {
+  .container {
+    	width: 98%;
+  }
+  .main {
+        padding-right: 40px;
+        padding-left: 340px;  /* 180 + 40 */
+    }
+}
+
+/*
+* Placeholder dashboard ideas - TAKE OUT LATER
+*/
+
+.placeholders {
+    margin-bottom: 30px;
+    text-align: center;
+}
+.placeholders h4 {
+    margin-bottom: 0;
+}
+.placeholder {
+    margin-bottom: 20px;
+}
+.placeholder img {
+    display: inline-block;
+    border-radius: 50%;
+}
+
+/*
+* Badge Colors
+*/
+
+.badge-critical {
+	background-color: $brand-danger;
+}
+.badge-high {
+	background-color: orange;
+}
+.badge-medium {
+	background-color: yellow;
+	color: $brand-primary;
+}
+.badge-low {
+	background-color: $brand-secondary;
+}

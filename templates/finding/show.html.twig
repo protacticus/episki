@@ -1,0 +1,27 @@
+{% extends 'finding/layout.html.twig' %}
+
+{% block body_id 'finding_show' %}
+
+{% block main %}
+    <h1>{{ finding.title }}</h1>
+
+	<h3>{{ 'label.description'|trans }}</h3>
+    {{ finding.description|md2html }}
+
+{% endblock %}
+
+{% block sidebar %}
+    <div class="section">
+        <a href="{{ path('finding_edit', {id: finding.id}) }}" class="btn btn-lg btn-block btn-primary">
+            <i class="fa fa-eye" aria-hidden="true"></i> {{ 'action.edit_finding'|trans }}
+        </a>
+    </div>
+
+    <div class="section actions">
+        {{ include('finding/_delete_form.html.twig', {finding: finding}, with_context = false) }}
+    </div>
+
+    {{ parent() }}
+
+
+{% endblock %}

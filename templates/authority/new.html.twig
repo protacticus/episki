@@ -1,0 +1,31 @@
+{% extends 'admin/layout.html.twig' %}
+
+{% block body_id 'authority_new' %}
+
+{% block main %}
+    <h1>{{ 'title.authority_new'|trans }}</h1>
+
+    {{ form_start(form) }}
+        {{ form_row(form.title) }}
+        {{ form_row(form.fullname) }}
+        {{ form_row(form.altnames) }}
+        {{ form_row(form.createdate) }}
+        {{ form_row(form.version) }}
+        {{ form_row(form.description) }}
+
+
+        <button type="submit" class="btn btn-primary">
+            <i class="fa fa-save" aria-hidden="true"></i> {{ 'label.create_authority'|trans }}
+        </button>
+        <a href="{{ path('authority_index') }}" class="btn btn-link">
+            <i class="fa fa-list-alt" aria-hidden="true"></i> {{ 'action.back_to_list'|trans }}
+        </a>
+    {{ form_end(form) }}
+{% endblock %}
+
+{% block sidebar %}
+    {{ parent() }}
+
+
+{% endblock %}
+

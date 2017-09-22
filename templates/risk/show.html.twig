@@ -1,0 +1,27 @@
+{% extends 'risk/layout.html.twig' %}
+
+{% block body_id 'risk_show' %}
+
+{% block main %}
+    <h1>{{ risk.title }}</h1>
+	<h2><span class="badge badge-{{ risk.risk|lower }}">{{ risk.risk }}</span></h2>
+	<h3>{{ 'label.description'|trans }}</h3>
+    {{ risk.description|md2html }}
+
+{% endblock %}
+
+{% block sidebar %}
+    <div class="section">
+        <a href="{{ path('risk_edit', {id: risk.id}) }}" class="btn btn-lg btn-block btn-primary">
+            <i class="fa fa-eye" aria-hidden="true"></i> {{ 'action.edit_risk'|trans }}
+        </a>
+    </div>
+
+    <div class="section actions">
+        {{ include('risk/_delete_form.html.twig', {risk: risk}, with_context = false) }}
+    </div>
+
+    {{ parent() }}
+
+
+{% endblock %}

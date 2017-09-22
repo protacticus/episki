@@ -1,0 +1,20 @@
+<table class="table table-striped table-middle-aligned">
+    <thead>
+        <tr>
+            <th scope="col">Risk</th>
+            <th scope="col">Rating</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for risk in risks %}
+        <tr>
+            <td>{{ risk.title }}</td>
+            <td><span class="badge badge-{{ risk.risk|lower }}">{{ risk.risk }}</span></td>
+        </tr>
+    {% else %}
+        <tr>
+            <td colspan="4" align="center">No risks</td>
+       </tr>
+    {% endfor %}
+    </tbody>
+</table>

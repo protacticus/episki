@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block body_id 'risk_index' %}
+
+{% block main %}
+    <h1>{{ 'title.risk_list'|trans }}</h1>
+
+    <table class="table table-striped table-middle-aligned">
+        <thead>
+            <tr>
+                <th scope="col">{{ 'label.title'|trans }}</th>
+                <th scope="col"><i class="fa fa-bomb" aria-hidden="true"></i> {{ 'label.risk'|trans }}</th>
+                <th scope="col" class="text-center"><i class="fa fa-cogs" aria-hidden="true"></i> {{ 'label.actions'|trans }}</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for risk in risks %}
+            <tr>
+                <td>{{ risk.title }}</td>
+                <td><span class="badge badge-{{ risk.risk|lower }}">{{ risk.risk }}</span></td>
+                <td class="text-right">
+                    <div class="item-actions">
+                        <a href="{{ path('risk_show', {id: risk.id}) }}" class="btn btn-sm btn-default">
+                            <i class="fa fa-eye" aria-hidden="true"></i> {{ 'action.show'|trans }}
+                        </a>
+
+                        <a href="{{ path('risk_edit', {id: risk.id}) }}" class="btn btn-sm btn-primary">
+                            <i class="fa fa-edit" aria-hidden="true"></i> {{ 'action.edit'|trans }}
+                        </a>
+                    </div>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4" align="center">{{ 'risk.no_risk_found'|trans }}</td>
+           </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+
+{% block sidebar %}
+    <div class="section actions">
+        <a href="{{ path('risk_new') }}" class="btn btn-lg btn-block btn-primary">
+            <i class="fa fa-plus" aria-hidden="true"></i> {{ 'action.create_risk'|trans }}
+        </a>
+    </div>
+
+    {{ parent() }}
+
+{% endblock %}

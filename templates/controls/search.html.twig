@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('build/js/search.js') }}"></script>
+{% endblock %}
+
+{% block main %}
+    <form action="{{ path('controls_search') }}" method="get">
+        <div class="form-group">
+            <input name="q" type="text" class="form-control search-field" placeholder="{{ 'label.searchfor'|trans }}" autocomplete="off" autofocus>
+        </div>
+    </form>
+
+    <div id="results">
+    </div>
+{% endblock %}
+
+{% block sidebar %}
+    {{ parent() }}
+
+
+{% endblock %}

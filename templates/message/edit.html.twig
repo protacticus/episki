@@ -1,0 +1,30 @@
+{% extends 'admin/layout.html.twig' %}
+
+{% block body_id 'message_edit' %}
+
+{% block main %}
+    <h1>{{ 'title.edit_message'|trans({'%id%': message.id}) }}</h1>
+
+    {{ include('message/_form.html.twig', {
+        form: form,
+        button_label: 'action.save'|trans,
+        include_back_to_home_link: true,
+    }, with_context = false) }}
+{% endblock %}
+
+{% block sidebar %}
+    <div class="section">
+        <a href="{{ path('message_show', {id: message.id}) }}" class="btn btn-lg btn-block btn-primary">
+            <i class="fa fa-eye" aria-hidden="true"></i> {{ 'action.show_message'|trans }}
+        </a>
+    </div>
+
+    <div class="section actions">
+        {{ include('message/_delete_form.html.twig', {message: message}, with_context = false) }}
+    </div>
+
+    {{ parent() }}
+
+
+{% endblock %}
+

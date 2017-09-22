@@ -1,0 +1,27 @@
+{% extends 'authority/layout.html.twig' %}
+
+{% block body_id 'authority_show' %}
+
+{% block main %}
+    <h1>{{ authority.fullname }} {{ authority.version }}</h1>
+
+	<h3>{{ 'label.description'|trans }}</h3>
+    {{ authority.description|md2html }}
+
+{% endblock %}
+
+{% block sidebar %}
+    <div class="section">
+        <a href="{{ path('authority_edit', {id: authority.id}) }}" class="btn btn-lg btn-block btn-primary">
+            <i class="fa fa-eye" aria-hidden="true"></i> {{ 'action.edit_authority'|trans }}
+        </a>
+    </div>
+
+    <div class="section actions">
+        {{ include('authority/_delete_form.html.twig', {authority: authority}, with_context = false) }}
+    </div>
+
+    {{ parent() }}
+
+
+{% endblock %}

@@ -1,0 +1,15 @@
+<li class="dropdown">
+{% if unread is empty %}
+	<a href="#" class="dropdown-toggle fa fa-envelope" data-toggle="dropdown"></a>
+	<ul class="dropdown-menu fa-ul">
+		<li><a href="{{ path('message_index') }}">{{ 'menu.no-alerts'|trans }}</a></li>
+	</ul>
+{% else %}
+	<a href="#" class="dropdown-toggle fa fa-envelope notification" data-toggle="dropdown"></a>
+	<ul class="dropdown-menu fa-ul">
+	{% for message in unread %}
+	    <li><a href="{{ path('message_show', {id: message.id}) }}">{{ message.title }}</a></li>
+	{% endfor %}
+	</ul>
+{% endif %}
+</li>

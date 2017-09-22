@@ -1,0 +1,184 @@
+{#
+   This is the base template used as the application layout which contains the
+   common elements and decorates all the other templates.
+   See https://symfony.com/doc/current/book/templating.html#template-inheritance-and-layouts
+#}
+
+<!DOCTYPE html>
+<html lang="{{ app.request.locale }}">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>{% block title %}episki{% endblock %}</title>
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('build/css/app.css') }}">
+        {% endblock %}
+
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+
+    <body id="{% block body_id %}{% endblock %}">
+	    {% block body %}
+	    <!-- /#wrapper -->
+	    <div class="wrapper">
+
+		{% block nav %}
+			<!-- sidebar -->
+			<nav id="navsidebar">
+                <div class="navbar  mb-4">
+				    <ul class="nav navbar-nav navbar-left">
+				    	<li>
+				            <a href="#" class="dismiss">
+		                        <i class="fa fa-times fa-lg" aria-hidden="true"></i>
+		                    </a>
+				        </li>
+				    </ul>
+				
+				    <div class="navbar-header logo-right">
+				            <img class="logo"src="{{ asset('episki-logo-light.png') }}" />
+				    </div>
+				</div>
+
+                <ul class="nav nav-pills nav-sidebar">
+			        <li class="nav-item">
+			              <a class="nav-link active" href="{{ path('homepage') }}"><i class="fa fa-line-chart" aria-hidden="true"></i>{{ 'menu.dashboard'|trans }} <span class="sr-only">(current)</span></a>
+		            </li>
+		            <li class="nav-item">
+			              <a class="nav-link" href="{{ path('risk_index') }}"><i class="fa fa-bomb" aria-hidden="true"></i>{{ 'menu.risk'|trans }}</a>
+		            </li>
+		            <li class="nav-item">
+			              <a class="nav-link" href="{{ path('authority_index') }}"><i class="fa fa-institution" aria-hidden="true"></i>{{ 'menu.authority'|trans }}</a>
+		            </li>
+		            <li class="nav-item">
+			              <a class="nav-link" href="{{ path('controls_index') }}"><i class="fa fa-check-square-o" aria-hidden="true"></i>{{ 'menu.controls'|trans }}</a>
+		            </li>
+		            <li class="nav-item">
+			              <a class="nav-link" href="{{ path('finding_index') }}"><i class="fa fa-frown-o" aria-hidden="true"></i>{{ 'menu.finding'|trans }}</a>
+		            </li>
+		            <li class="nav-item">
+			              <a class="nav-link" href="{{ path('artifact_index') }}"><i class="fa fa-file" aria-hidden="true"></i>{{ 'menu.artifact'|trans }}</a>
+		            </li>
+		            <li class="nav-item">
+			              <a class="nav-link" href="{{ path('controls_search') }}"><i class="fa fa-search" aria-hidden="true"></i>{{ 'menu.search'|trans }}</a>
+                </ul>
+            </nav>
+            
+        {% endblock %}
+
+			<!-- Page Content -->
+			<div id="content">
+			 {% block header %}
+			 	<div class="navbar navbar-default mb-4" role="navigation">
+			 		<div class="container-fluid">
+                	
+                        
+                        <ul class="nav navbar-nav navbar-left">
+                        	<li>
+                                <a href="#" id="navsidebarCollapse">
+                                    <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <div class="navbar-header col-md-3 col-lg-2">
+                            <a class="navbar-brand" href="{{ path('homepage') }}">
+                                <img class="logo"src="{{ asset('episki-logo.png') }}" />
+                            </a>
+                        </div>
+						<div class="collapse navbar-collapse">
+							<ul class="nav navbar-nav navbar-right">
+                                {% if app.user %}
+                                	<li class="dropdown">
+					                    <a href="#" class="dropdown-toggle fa fa-plus fa-lg" data-toggle="dropdown">
+					                    </a>
+					                    <ul class="dropdown-menu fa-ul">
+						                    <li><a href="{{ path('finding_new') }}"><i class="fa fa-frown-o" aria-hidden="true"></i> {{ 'menu.add-finding'|trans }}</a></li>
+						                    <li><a href="{{ path('controls_new') }}"><i class="fa fa-check" aria-hidden="true"></i> {{ 'menu.add-controls'|trans }}</a></li>
+						                    <li><a href="{{ path('artifact_new') }}"><i class="fa fa-file" aria-hidden="true"></i> {{ 'menu.add-artifact'|trans }}</a></li>
+					                    </ul>
+					                </li>
+                                	{{ render(controller('App\\Controller\\MessageController:unreadMessages', {'limit': 10 })) }}
+                                    <li class="dropdown">
+					                    <a href="#" class="dropdown-toggle profile" data-toggle="dropdown"><img class="img-circle hidden-xs" src="https://www.gravatar.com/avatar/{{ app.user.email|gravatar }}?d=mm&s=34"></a>
+					                    <ul class="dropdown-menu fa-ul">
+					                        <li><a href=""><i class="fa fa-cog" aria-hidden="true"></i> Settings</a></li>
+											<li><a href="{{ path('security_logout') }}"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+					                    </ul>
+					                </li>
+                                {% endif %}
+                            </ul>
+						</div>
+                    </div>
+                </div>
+				{% endblock %}
+				<div class="container-fluid">
+	            	{% block content %}
+	            	<div class="row">
+		                <div class="col-sm-9">
+		                    {{ include('default/_flash_messages.html.twig') }}
+		
+		                    {% block main %}{% endblock %}
+		                </div>
+		
+		                <div id="sidebar" class="col-sm-3">
+		                    {% block sidebar %}
+		                        {{ render_esi(controller('FrameworkBundle:Template:template', {
+		                            'template': 'default/about.html.twig',
+		                            'sharedAge': 600,
+		                            '_locale': app.request.locale
+		                        })) }}
+		                    {% endblock %}
+		                </div>
+	            	</div>
+
+	            	{% endblock %}
+				</div>
+			</div>
+	    </div>
+	    
+	    <div class="overlay"></div>
+        
+        {% block footer %}
+        {% endblock %}
+        
+        
+
+        {% block javascripts %}
+            <script src="{{ asset('build/manifest.js') }}"></script>
+            <script src="{{ asset('build/js/common.js') }}"></script>
+            <script src="{{ asset('build/js/app.js') }}"></script>
+             <!-- jQuery CDN -->
+	         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+	         <!-- jQuery Nicescroll CDN -->
+	         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.8-fix/jquery.nicescroll.min.js"></script>
+        {% endblock %}
+        
+        <script type="text/javascript">
+             $(document).ready(function () {
+                 $("#navsidebar").niceScroll({
+                     cursorcolor: '#53619d',
+                     cursorwidth: 4,
+                     cursorborder: 'none'
+                 });
+
+                 $('.dismiss, .overlay').on('click', function () {
+                    $('#navsidebar').removeClass('active');
+                    $('.overlay').hide();
+                 });
+
+                 $('#navsidebarCollapse').on('click', function () {
+                     $('#navsidebar').addClass('active');
+                     $('.overlay').show();
+                     $('.collapse.in').toggleClass('in');
+                     $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+                 });
+             });
+         </script>
+
+        {# it's not mandatory to set the timezone in localizeddate(). This is done to
+           avoid errors when the 'intl' PHP extension is not available and the application
+           is forced to use the limited "intl polyfill", which only supports UTC and GMT #}
+        <!-- Page rendered on {{ 'now'|localizeddate('long', 'long', null, 'UTC') }} -->
+    {% endblock %}
+    </body>
+</html>

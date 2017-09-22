@@ -1,0 +1,30 @@
+{% extends 'admin/layout.html.twig' %}
+
+{% block body_id 'artifact_edit' %}
+
+{% block main %}
+    <h1>{{ 'title.edit_artifact'|trans({'%id%': artifact.id}) }}</h1>
+
+    {{ include('artifact/_form.html.twig', {
+        form: form,
+        button_label: 'action.save'|trans,
+        include_back_to_home_link: true,
+    }, with_context = false) }}
+{% endblock %}
+
+{% block sidebar %}
+    <div class="section">
+        <a href="{{ path('artifact_show', {id: artifact.id}) }}" class="btn btn-lg btn-block btn-primary">
+            <i class="fa fa-eye" aria-hidden="true"></i> {{ 'action.show_artifact'|trans }}
+        </a>
+    </div>
+
+    <div class="section actions">
+        {{ include('artifact/_delete_form.html.twig', {artifact: artifact}, with_context = false) }}
+    </div>
+
+    {{ parent() }}
+
+
+{% endblock %}
+

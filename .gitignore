@@ -1,0 +1,31 @@
+/build/
+/node_modules/
+/phpunit.xml
+/.php_cs
+/var/*
+!/var/cache
+/var/cache/*
+!var/cache/.gitkeep
+!/var/data
+!/var/logs
+/var/logs/*
+!var/logs/.gitkeep
+!/var/sessions
+/var/sessions/*
+!var/sessions/.gitkeep
+!var/SymfonyRequirements.php
+/public/build/fonts/glyphicons-*
+/public/build/images/glyphicons-*
+/artifacts/*
+###> symfony/framework-bundle ###
+.env
+/public/bundles/
+/var/
+/vendor/
+###< symfony/framework-bundle ###
+###> symfony/phpunit-bridge ###
+/phpunit.xml
+###< symfony/phpunit-bridge ###
+###> symfony/web-server-bundle ###
+.web-server-pid
+###< symfony/web-server-bundle ###

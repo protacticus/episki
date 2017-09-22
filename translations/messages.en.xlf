@@ -1,0 +1,702 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="note">
+                <source>note</source>
+                <target>NOTE</target>
+            </trans-unit>
+            <trans-unit id="tip">
+                <source>tip</source>
+                <target>TIP</target>
+            </trans-unit>
+            <trans-unit id="not_available">
+                <source>not_available</source>
+                <target>Not available</target>
+            </trans-unit>
+            <trans-unit id="mit_license">
+                <source>gnu_license</source>
+                <target>GNU License</target>
+            </trans-unit>
+
+            <trans-unit id="http_error.name">
+                <source>http_error.name</source>
+                <target>Error %status_code%</target>
+            </trans-unit>
+            <trans-unit id="http_error.description">
+                <source>http_error.description</source>
+                <target>There was an unknown error (HTTP %status_code%) that prevented to complete your request.</target>
+            </trans-unit>
+            <trans-unit id="http_error.suggestion">
+                <source>http_error.suggestion</source>
+                <target><![CDATA[Try loading this page again in some minutes or <a href="%url%">go back to the homepage</a>.]]></target>
+            </trans-unit>
+            <trans-unit id="http_error_403.description">
+                <source>http_error_403.description</source>
+                <target>You don't have permission to access to this resource.</target>
+            </trans-unit>
+            <trans-unit id="http_error_403.suggestion">
+                <source>http_error_403.suggestion</source>
+                <target>Ask your manager or system administrator to grant you access to this resource.</target>
+            </trans-unit>
+            <trans-unit id="http_error_404.description">
+                <source>http_error_404.description</source>
+                <target>We couldn't find the page you requested.</target>
+            </trans-unit>
+            <trans-unit id="http_error_404.suggestion">
+                <source>http_error_404.suggestion</source>
+                <target><![CDATA[Check out any misspelling in the URL or <a href="%url%">go back to the homepage</a>.]]></target>
+            </trans-unit>
+            <trans-unit id="http_error_500.description">
+                <source>http_error_500.description</source>
+                <target>There was an internal server error.</target>
+            </trans-unit>
+            <trans-unit id="http_error_500.suggestion">
+                <source>http_error_500.suggestion</source>
+                <target><![CDATA[Try loading this page again in some minutes or <a href="%url%">go back to the homepage</a>.]]></target>
+            </trans-unit>
+
+            <trans-unit id="title.homepage">
+                <source>title.homepage</source>
+                <target><![CDATA[Welcome to <strong>episki</strong> core]]></target>
+            </trans-unit>
+            <trans-unit id="title.source_code">
+                <source>title.source_code</source>
+                <target>Source code used to render this page</target>
+            </trans-unit>
+            <trans-unit id="title.controller_code">
+                <source>title.controller_code</source>
+                <target>Controller code</target>
+            </trans-unit>
+            <trans-unit id="title.twig_template_code">
+                <source>title.twig_template_code</source>
+                <target>Twig template code</target>
+            </trans-unit>
+            <trans-unit id="title.login">
+                <source>title.login</source>
+                <target>Secure Sign in</target>
+            </trans-unit>
+            <trans-unit id="title.post_list">
+                <source>title.post_list</source>
+                <target>Post List</target>
+            </trans-unit>
+            <trans-unit id="title.edit_post">
+                <source>title.edit_post</source>
+                <target>Edit post #%id%</target>
+            </trans-unit>
+            <trans-unit id="title.add_comment">
+                <source>title.add_comment</source>
+                <target>Add a comment</target>
+            </trans-unit>
+            <trans-unit id="title.comment_error">
+                <source>title.comment_error</source>
+                <target>There was an error publishing your comment</target>
+            </trans-unit>
+
+            <trans-unit id="action.show">
+                <source>action.show</source>
+                <target>Show</target>
+            </trans-unit>
+            <trans-unit id="action.show_post">
+                <source>action.show_post</source>
+                <target>Show post</target>
+            </trans-unit>
+            <trans-unit id="action.show_code">
+                <source>action.show_code</source>
+                <target>Show code</target>
+            </trans-unit>
+            <trans-unit id="action.edit">
+                <source>action.edit</source>
+                <target>Edit</target>
+            </trans-unit>
+            <trans-unit id="action.edit_post">
+                <source>action.edit_post</source>
+                <target>Edit post</target>
+            </trans-unit>
+            <trans-unit id="action.save">
+                <source>action.save</source>
+                <target>Save changes</target>
+            </trans-unit>
+            <trans-unit id="action.delete_post">
+                <source>action.delete_post</source>
+                <target>Delete post</target>
+            </trans-unit>
+            <trans-unit id="delete_post_modal.title">
+                <source>delete_post_modal.title</source>
+                <target>Are you sure you want to delete this post?</target>
+            </trans-unit>
+            <trans-unit id="delete_post_modal.body">
+                <source>delete_post_modal.body</source>
+                <target>This action cannot be undone.</target>
+            </trans-unit>
+            <trans-unit id="label.cancel">
+                <source>label.cancel</source>
+                <target>Cancel</target>
+            </trans-unit>
+            <trans-unit id="action.create_post">
+                <source>action.create_post</source>
+                <target>Create a new post</target>
+            </trans-unit>
+            <trans-unit id="label.create_post">
+                <source>label.create_post</source>
+                <target>Create post</target>
+            </trans-unit>
+            <trans-unit id="label.save">
+                <source>label.save</source>
+                <target>Save</target>
+            </trans-unit>
+            <trans-unit id="label.save_and_create_new">
+                <source>label.save_and_create_new</source>
+                <target>Save and create new</target>
+            </trans-unit>
+            <trans-unit id="action.back_to_list">
+                <source>action.back_to_list</source>
+                <target>Back to the list</target>
+            </trans-unit>
+            <trans-unit id="action.publish_comment">
+                <source>action.publish_comment</source>
+                <target>Publish comment</target>
+            </trans-unit>
+            <trans-unit id="action.sign_in">
+                <source>action.sign_in</source>
+                <target>Sign in</target>
+            </trans-unit>
+            <trans-unit id="action.browse_app">
+                <source>action.browse_app</source>
+                <target>Browse application</target>
+            </trans-unit>
+            <trans-unit id="action.browse_admin">
+                <source>action.browse_admin</source>
+                <target>Browse backend</target>
+            </trans-unit>
+
+            <trans-unit id="label.title">
+                <source>label.title</source>
+                <target>Title</target>
+            </trans-unit>
+            <trans-unit id="label.author">
+                <source>label.author</source>
+                <target>Author</target>
+            </trans-unit>
+            <trans-unit id="label.author_email">
+                <source>label.author_email</source>
+                <target>Author email</target>
+            </trans-unit>
+            <trans-unit id="label.username">
+                <source>label.username</source>
+                <target>Username</target>
+            </trans-unit>
+            <trans-unit id="label.password">
+                <source>label.password</source>
+                <target>Password</target>
+            </trans-unit>
+            <trans-unit id="label.role">
+                <source>label.role</source>
+                <target>Role</target>
+            </trans-unit>
+            <trans-unit id="label.content">
+                <source>label.content</source>
+                <target>Content</target>
+            </trans-unit>
+            <trans-unit id="label.summary">
+                <source>label.summary</source>
+                <target>Summary</target>
+            </trans-unit>
+            <trans-unit id="label.published_at">
+                <source>label.published_at</source>
+                <target>Published at</target>
+            </trans-unit>
+            <trans-unit id="label.tags">
+                <source>label.tags</source>
+                <target>Tags</target>
+            </trans-unit>
+            <trans-unit id="label.requirement">
+                <source>label.requirement</source>
+                <target>Requirement</target>
+            </trans-unit>
+            <trans-unit id="label.owners">
+                <source>label.owners</source>
+                <target>Owners</target>
+            </trans-unit>
+            <trans-unit id="label.description">
+                <source>label.description</source>
+                <target>Description</target>
+            </trans-unit>
+            <trans-unit id="label.actions">
+                <source>label.actions</source>
+                <target>Actions</target>
+            </trans-unit>
+            <trans-unit id="label.risk">
+                <source>label.risk</source>
+                <target>Risk</target>
+            </trans-unit>
+            <trans-unit id="action.edit_contents">
+                <source>action.edit_contents</source>
+                <target>Edit contents</target>
+            </trans-unit>
+            <trans-unit id="label.fullname">
+                <source>label.fullname</source>
+                <target>Full Name</target>
+            </trans-unit>
+            <trans-unit id="label.altnames">
+                <source>label.altnames</source>
+                <target>Alternate Names</target>
+            </trans-unit>
+            <trans-unit id="label.createdate">
+                <source>label.createdate</source>
+                <target>Create Date</target>
+            </trans-unit>
+            <trans-unit id="label.version">
+                <source>label.version</source>
+                <target>Version</target>
+            </trans-unit>
+            <trans-unit id="label.authority">
+                <source>label.authority</source>
+                <target>Authority</target>
+            </trans-unit>
+            <trans-unit id="label.number">
+                <source>label.number</source>
+                <target>Ref.</target>
+            </trans-unit>
+            <trans-unit id="label.date">
+                <source>label.date</source>
+                <target>Date</target>
+            </trans-unit>
+            <trans-unit id="label.authorityref">
+                <source>label.authorityref</source>
+                <target>Authority</target>
+            </trans-unit>
+            <trans-unit id="label.file">
+                <source>label.file</source>
+                <target>File</target>
+            </trans-unit>
+            <trans-unit id="label.searchfor">
+                <source>label.searchfor</source>
+                <target>Search for...</target>
+            </trans-unit>
+
+            <trans-unit id="menu.toggle_nav">
+                <source>menu.toggle_nav</source>
+                <target>Toggle navigation</target>
+            </trans-unit>
+            <trans-unit id="menu.homepage">
+                <source>menu.homepage</source>
+                <target>Homepage</target>
+            </trans-unit>
+            <trans-unit id="menu.dashboard">
+                <source>menu.dashboard</source>
+                <target>Dashboard</target>
+            </trans-unit>
+            <trans-unit id="menu.risk">
+                <source>menu.risk</source>
+                <target>Risk</target>
+            </trans-unit>
+            <trans-unit id="menu.authority">
+                <source>menu.authority</source>
+                <target>Authority</target>
+            </trans-unit>
+            <trans-unit id="menu.controls">
+                <source>menu.controls</source>
+                <target>Controls</target>
+            </trans-unit>
+            <trans-unit id="menu.finding">
+                <source>menu.finding</source>
+                <target>Findings</target>
+            </trans-unit>
+            <trans-unit id="menu.artifact">
+                <source>menu.artifact</source>
+                <target>Artifacts</target>
+            </trans-unit>
+            <trans-unit id="menu.logout">
+                <source>menu.logout</source>
+                <target>Logout</target>
+            </trans-unit>
+            <trans-unit id="menu.rss">
+                <source>menu.rss</source>
+                <target>Blog Posts RSS</target>
+            </trans-unit>
+            <trans-unit id="menu.search">
+                <source>menu.search</source>
+                <target>Search</target>
+            </trans-unit>
+            <trans-unit id="menu.add-finding">
+                <source>menu.add-finding</source>
+                <target>Add Finding</target>
+            </trans-unit>
+            <trans-unit id="menu.add-controls">
+                <source>menu.add-controls</source>
+                <target>Add Control</target>
+            </trans-unit>
+            <trans-unit id="menu.add-artifact">
+                <source>menu.add-artifact</source>
+                <target>Add Artifact</target>
+            </trans-unit>
+            <trans-unit id="menu.add-risk">
+                <source>menu.add-risk</source>
+                <target>Add Risk</target>
+            </trans-unit>
+            <trans-unit id="menu.no-alerts">
+                <source>menu.no-alerts</source>
+                <target>No alerts</target>
+            </trans-unit>
+            
+            <trans-unit id="title.risk_list">
+                <source>title.risk_list</source>
+                <target>Risks</target>
+            </trans-unit>
+            <trans-unit id="action.create_risk">
+                <source>action.create_risk</source>
+                <target>Create risk</target>
+            </trans-unit>
+            <trans-unit id="title.risk_new">
+                <source>title.risk_new</source>
+                <target>Create risk</target>
+            </trans-unit>
+            <trans-unit id="title.edit_risk">
+                <source>title.edit_risk</source>
+                <target>Edit risk</target>
+            </trans-unit>
+            <trans-unit id="label.create_risk">
+                <source>label.create_risk</source>
+                <target>Save</target>
+            </trans-unit>
+            <trans-unit id="risk.created_successfully">
+                <source>risk.created_successfully</source>
+                <target>Created successfully</target>
+            </trans-unit>
+            <trans-unit id="risk.update_successfully">
+                <source>risk.deleted_successfully</source>
+                <target>Updated successfully</target>
+            </trans-unit>
+            <trans-unit id="risk.deleted_successfully">
+                <source>risk.deleted_successfully</source>
+                <target>Deleted successfully</target>
+            </trans-unit>
+            <trans-unit id="risk.no_risk_found">
+                <source>risk.no_risk_found</source>
+                <target>No risks found.</target>
+            </trans-unit>
+            <trans-unit id="action.edit_risk">
+                <source>action.edit_risk</source>
+                <target>Edit risk</target>
+            </trans-unit>
+            <trans-unit id="action.delete_risk">
+                <source>action.delete_risk</source>
+                <target>Delete</target>
+            </trans-unit>
+            <trans-unit id="action.show_risk">
+                <source>action.show_risk</source>
+                <target>Show</target>
+            </trans-unit>
+            <trans-unit id="label.delete_risk">
+                <source>label.delete_risk</source>
+                <target>Delete</target>
+            </trans-unit>
+			<trans-unit id="delete_risk_modal.title">
+                <source>delete_risk_modal.title</source>
+                <target>Are you sure you want to delete this risk?</target>
+            </trans-unit>
+            <trans-unit id="delete_risk_modal.body">
+                <source>delete_risk_modal.body</source>
+                <target>This action cannot be undone.</target>
+            </trans-unit>
+            
+            <trans-unit id="title.authority_list">
+                <source>title.authority_list</source>
+                <target>Authoritative Sources</target>
+            </trans-unit>
+            <trans-unit id="action.create_authority">
+                <source>action.create_authority</source>
+                <target>Create authority</target>
+            </trans-unit>
+            <trans-unit id="title.authority_new">
+                <source>title.authority_new</source>
+                <target>Create authority</target>
+            </trans-unit>
+            <trans-unit id="title.edit_authority">
+                <source>title.edit_authority</source>
+                <target>Edit authority</target>
+            </trans-unit>
+            <trans-unit id="label.create_authority">
+                <source>label.create_authority</source>
+                <target>Save</target>
+            </trans-unit>
+            <trans-unit id="authority.created_successfully">
+                <source>authority.created_successfully</source>
+                <target>Created successfully</target>
+            </trans-unit>
+            <trans-unit id="authority.update_successfully">
+                <source>authority.deleted_successfully</source>
+                <target>Updated successfully</target>
+            </trans-unit>
+            <trans-unit id="authority.deleted_successfully">
+                <source>authority.deleted_successfully</source>
+                <target>Deleted successfully</target>
+            </trans-unit>
+            <trans-unit id="authority.no_authority_found">
+                <source>authority.no_authority_found</source>
+                <target>No authority sources found.</target>
+            </trans-unit>
+            <trans-unit id="action.edit_authority">
+                <source>action.edit_authority</source>
+                <target>Edit authority</target>
+            </trans-unit>
+            <trans-unit id="action.delete_authority">
+                <source>action.delete_authority</source>
+                <target>Delete</target>
+            </trans-unit>
+            <trans-unit id="action.show_authority">
+                <source>action.show_authority</source>
+                <target>Show</target>
+            </trans-unit>
+            <trans-unit id="label.delete_authority">
+                <source>label.delete_authority</source>
+                <target>Delete</target>
+            </trans-unit>
+			<trans-unit id="delete_authority_modal.title">
+                <source>delete_authority_modal.title</source>
+                <target>Are you sure you want to delete this authority?</target>
+            </trans-unit>
+            <trans-unit id="delete_authority_modal.body">
+                <source>delete_authority_modal.body</source>
+                <target>This action cannot be undone.</target>
+            </trans-unit>
+            
+            <trans-unit id="title.controls_list">
+                <source>title.controls_list</source>
+                <target>Controls</target>
+            </trans-unit>
+            <trans-unit id="action.create_controls">
+                <source>action.create_controls</source>
+                <target>Create control</target>
+            </trans-unit>
+            <trans-unit id="title.controls_new">
+                <source>title.controls_new</source>
+                <target>Create controls</target>
+            </trans-unit>
+            <trans-unit id="title.edit_controls">
+                <source>title.edit_controls</source>
+                <target>Edit controls</target>
+            </trans-unit>
+            <trans-unit id="label.create_controls">
+                <source>label.create_controls</source>
+                <target>Save</target>
+            </trans-unit>
+            <trans-unit id="controls.created_successfully">
+                <source>controls.created_successfully</source>
+                <target>Created successfully</target>
+            </trans-unit>
+            <trans-unit id="controls.update_successfully">
+                <source>controls.deleted_successfully</source>
+                <target>Updated successfully</target>
+            </trans-unit>
+            <trans-unit id="controls.deleted_successfully">
+                <source>controls.deleted_successfully</source>
+                <target>Deleted successfully</target>
+            </trans-unit>
+            <trans-unit id="controls.no_controls_found">
+                <source>controls.no_controls_found</source>
+                <target>No controls sources found.</target>
+            </trans-unit>
+            <trans-unit id="action.edit_controls">
+                <source>action.edit_controls</source>
+                <target>Edit control</target>
+            </trans-unit>
+            <trans-unit id="action.delete_controls">
+                <source>action.delete_controls</source>
+                <target>Delete</target>
+            </trans-unit>
+            <trans-unit id="action.show_controls">
+                <source>action.show_controls</source>
+                <target>Show</target>
+            </trans-unit>
+            <trans-unit id="label.delete_controls">
+                <source>label.delete_controls</source>
+                <target>Delete</target>
+            </trans-unit>
+			<trans-unit id="delete_controls_modal.title">
+                <source>delete_controls_modal.title</source>
+                <target>Are you sure you want to delete this control?</target>
+            </trans-unit>
+            <trans-unit id="delete_controls_modal.body">
+                <source>delete_controls_modal.body</source>
+                <target>This action cannot be undone.</target>
+            </trans-unit>
+            
+            <trans-unit id="title.artifact_list">
+                <source>title.artifact_list</source>
+                <target>Artifacts</target>
+            </trans-unit>
+            <trans-unit id="action.create_artifact">
+                <source>action.create_artifact</source>
+                <target>Create artifact</target>
+            </trans-unit>
+            <trans-unit id="title.artifact_new">
+                <source>title.artifact_new</source>
+                <target>Create artifact</target>
+            </trans-unit>
+            <trans-unit id="title.edit_artifact">
+                <source>title.edit_artifact</source>
+                <target>Edit artifact</target>
+            </trans-unit>
+            <trans-unit id="label.create_artifact">
+                <source>label.create_artifact</source>
+                <target>Save</target>
+            </trans-unit>
+            <trans-unit id="artifact.created_successfully">
+                <source>artifact.created_successfully</source>
+                <target>Created successfully</target>
+            </trans-unit>
+            <trans-unit id="artifact.update_successfully">
+                <source>artifact.deleted_successfully</source>
+                <target>Updated successfully</target>
+            </trans-unit>
+            <trans-unit id="artifact.deleted_successfully">
+                <source>artifact.deleted_successfully</source>
+                <target>Deleted successfully</target>
+            </trans-unit>
+            <trans-unit id="artifact.no_artifact_found">
+                <source>artifact.no_artifact_found</source>
+                <target>No artifact sources found.</target>
+            </trans-unit>
+            <trans-unit id="action.edit_artifact">
+                <source>action.edit_artifact</source>
+                <target>Edit artifact</target>
+            </trans-unit>
+            <trans-unit id="action.delete_artifact">
+                <source>action.delete_artifact</source>
+                <target>Delete</target>
+            </trans-unit>
+            <trans-unit id="action.show_artifact">
+                <source>action.show_artifact</source>
+                <target>Show</target>
+            </trans-unit>
+            <trans-unit id="label.delete_artifact">
+                <source>label.delete_artifact</source>
+                <target>Delete</target>
+            </trans-unit>
+			<trans-unit id="delete_artifact_modal.title">
+                <source>delete_artifact_modal.title</source>
+                <target>Are you sure you want to delete this artifact?</target>
+            </trans-unit>
+            <trans-unit id="delete_artifact_modal.body">
+                <source>delete_artifact_modal.body</source>
+                <target>This action cannot be undone.</target>
+            </trans-unit>
+            
+            <trans-unit id="title.finding_list">
+                <source>title.finding_list</source>
+                <target>Findings</target>
+            </trans-unit>
+            <trans-unit id="action.create_finding">
+                <source>action.create_finding</source>
+                <target>Create finding</target>
+            </trans-unit>
+            <trans-unit id="title.finding_new">
+                <source>title.finding_new</source>
+                <target>Create finding</target>
+            </trans-unit>
+            <trans-unit id="title.edit_finding">
+                <source>title.edit_finding</source>
+                <target>Edit finding</target>
+            </trans-unit>
+            <trans-unit id="label.create_finding">
+                <source>label.create_finding</source>
+                <target>Save</target>
+            </trans-unit>
+            <trans-unit id="finding.created_successfully">
+                <source>finding.created_successfully</source>
+                <target>Created successfully</target>
+            </trans-unit>
+            <trans-unit id="finding.update_successfully">
+                <source>finding.deleted_successfully</source>
+                <target>Updated successfully</target>
+            </trans-unit>
+            <trans-unit id="finding.deleted_successfully">
+                <source>finding.deleted_successfully</source>
+                <target>Deleted successfully</target>
+            </trans-unit>
+            <trans-unit id="finding.no_finding_found">
+                <source>finding.no_finding_found</source>
+                <target>No findings found.</target>
+            </trans-unit>
+            <trans-unit id="action.edit_finding">
+                <source>action.edit_finding</source>
+                <target>Edit finding</target>
+            </trans-unit>
+            <trans-unit id="action.delete_finding">
+                <source>action.delete_finding</source>
+                <target>Delete</target>
+            </trans-unit>
+            <trans-unit id="action.show_finding">
+                <source>action.show_finding</source>
+                <target>Show</target>
+            </trans-unit>
+            <trans-unit id="label.delete_finding">
+                <source>label.delete_finding</source>
+                <target>Delete</target>
+            </trans-unit>
+			<trans-unit id="delete_finding_modal.title">
+                <source>delete_finding_modal.title</source>
+                <target>Are you sure you want to delete this finding?</target>
+            </trans-unit>
+            <trans-unit id="delete_finding_modal.body">
+                <source>delete_finding_modal.body</source>
+                <target>This action cannot be undone.</target>
+            </trans-unit>
+            
+
+
+            <trans-unit id="notification.comment_created">
+                <source>notification.comment_created</source>
+                <target>Your post received a comment!</target>
+            </trans-unit>
+            <trans-unit id="notification.comment_created.description">
+                <source>notification.comment_created.description</source>
+                <target><![CDATA[Your post "%title%" has received a new comment. You can read the comment by following <a href="%link%">this link</a>]]></target>
+            </trans-unit>
+
+            <trans-unit id="help.app_description">
+                <source>help.app_description</source>
+                <target><![CDATA[<strong>episki core</strong> is built with the purpose of helping companies out in managing their security programs.]]></target>
+            </trans-unit>
+            <trans-unit id="help.show_code">
+                <source>help.show_code</source>
+                <target><![CDATA[Click on this button to show the source code of the <strong>Controller</strong> and <strong>template</strong> used to render this page.]]></target>
+            </trans-unit>
+            <trans-unit id="help.browse_app">
+                <source>help.browse_app</source>
+                <target><![CDATA[Browse the <strong>public section</strong> of the demo application.]]></target>
+            </trans-unit>
+            <trans-unit id="help.browse_admin">
+                <source>help.browse_admin</source>
+                <target><![CDATA[Browse the <strong>admin backend</strong> of the demo application.]]></target>
+            </trans-unit>
+            <trans-unit id="help.login_users">
+                <source>help.login_users</source>
+                <target>Try either of the following users</target>
+            </trans-unit>
+            <trans-unit id="help.role_user">
+                <source>help.role_user</source>
+                <target>regular user</target>
+            </trans-unit>
+            <trans-unit id="help.role_admin">
+                <source>help.role_admin</source>
+                <target>administrator</target>
+            </trans-unit>
+            <trans-unit id="help.reload_fixtures">
+                <source>help.reload_fixtures</source>
+                <target>If these users don't work, reload application fixtures by running this command from the terminal:</target>
+            </trans-unit>
+            <trans-unit id="help.add_user">
+                <source>help.add_user</source>
+                <target>If you want to create new users, run this other command:</target>
+            </trans-unit>
+            <trans-unit id="help.more_information">
+                <source>help.more_information</source>
+                <target><![CDATA[For more information, check out <a href="http://episki.org/">episki.org</a>.]]></target>
+            </trans-unit>
+            
+        </body>
+    </file>
+</xliff>

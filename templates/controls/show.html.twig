@@ -1,0 +1,35 @@
+{% extends 'controls/layout.html.twig' %}
+
+{% block body_id 'controls_show' %}
+
+{% block main %}
+    <h1>{{ controls.authorityref.title }} {{ controls.number }}</h1>
+
+    <div class="well">
+<!--         <p class="m-b-0"><strong>{{ 'label.requirement'|trans }}</strong>:</p> -->
+		 {{ controls.requirement|md2html }}
+    </div>
+    
+<!--     <h3>{{ 'label.owners'|trans }}</h3> -->
+    {{ include('controls/_control_owners.html.twig') }}
+
+	<h3>{{ 'label.description'|trans }}</h3>
+    {{ controls.description|md2html }}
+
+{% endblock %}
+
+{% block sidebar %}
+    <div class="section">
+        <a href="{{ path('controls_edit', {id: controls.id}) }}" class="btn btn-lg btn-block btn-primary">
+            <i class="fa fa-eye" aria-hidden="true"></i> {{ 'action.edit_controls'|trans }}
+        </a>
+    </div>
+
+    <div class="section actions">
+        {{ include('controls/_delete_form.html.twig', {controls: controls}, with_context = false) }}
+    </div>
+
+    {{ parent() }}
+
+
+{% endblock %}

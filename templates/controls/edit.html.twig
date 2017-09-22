@@ -1,0 +1,30 @@
+{% extends 'admin/layout.html.twig' %}
+
+{% block body_id 'controls_edit' %}
+
+{% block main %}
+    <h1>{{ 'title.edit_controls'|trans({'%id%': controls.id}) }}</h1>
+
+    {{ include('controls/_form.html.twig', {
+        form: form,
+        button_label: 'action.save'|trans,
+        include_back_to_home_link: true,
+    }, with_context = false) }}
+{% endblock %}
+
+{% block sidebar %}
+    <div class="section">
+        <a href="{{ path('controls_show', {id: controls.id}) }}" class="btn btn-lg btn-block btn-primary">
+            <i class="fa fa-eye" aria-hidden="true"></i> {{ 'action.show_controls'|trans }}
+        </a>
+    </div>
+
+    <div class="section actions">
+        {{ include('controls/_delete_form.html.twig', {controls: controls}, with_context = false) }}
+    </div>
+
+    {{ parent() }}
+
+
+{% endblock %}
+

@@ -1,0 +1,10 @@
+{% if not controls.users.empty %}
+    <p class="control-tags">
+        {% for user in controls.users %}
+            <span class="label label-default">
+                <i class="fa fa-user"></i> {{ user.fullName }}
+            </span>
+        {% endfor %}
+    </p>
+{% endif %}
+

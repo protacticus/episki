@@ -1,0 +1,99 @@
+authsource,ref,control,description
+ESA,ORG 1.1,Verify Dedicated InfoSec/Risk group exists,This is the description of the control.
+ESA,ORG 1.2,Verify pen/red/purple testing,This is the description of the control.
+ESA,ORG 1.3,Verify data classification standard exists,This is the description of the control.
+ESA,ORG 1.4,Verify critical service classification standard exists,This is the description of the control.
+ESA,ORG 1.5,Verify asset mapping to critical services standard exists,This is the description of the control.
+ESA,ORG 1.6,Verify user/group to critical services standard exists,This is the description of the control.
+ESA,ORG 1.7,Verify RBAC standard exists,This is the description of the control.
+ESA,ORG 1.8,Verify executive buy-in to ensure all relevant business units are to participate,This is the description of the control.
+ESA,ORG 1.9,Verify ticketing system is configured to track incidents independent from normal tickets,This is the description of the control.
+ESA,CTL 2.1,Verify all firewalls are logging,This is the description of the control.
+ESA,CTL 2.2,Verify all IPS are logging,This is the description of the control.
+ESA,CTL 2.3,"Are methods used to detect, quarantine, and eradicate known malicious code on information systems including workstations, servers, and mobile computing devices?",This is the description of the control.
+ESA,CTL 2.4,"Are methods used to detect and eradicate known malicious code transported by electronic mail, the web, or removable media?",This is the description of the control.
+ESA,CTL 2.5,Verify all AV is logging,This is the description of the control.
+ESA,CTL 2.6,"Does your institution have a process for posture checking, such as current antivirus software, firewall enabled, OS patch level, etc., of devices as they connect to your network?",This is the description of the control.
+ESA,CTL 2.7,Does your institution have a segmented network architecture to provide different levels of security based on the information's classification?,This is the description of the control.
+ESA,CTL 2.8,"Are Internet-accessible servers protected by more than one security layer (firewalls, network IDS, host IDS, application IDS)?",This is the description of the control.
+ESA,CTL 2.9,Do you ensure that user access to diagnostic and configuration ports is restricted to authorized individuals and applications?,This is the description of the control.
+ESA,CTL 2.10,Have you implemented tools and procedures to monitor for and prevent loss of sensitive data?,This is the description of the control.
+ESA,CTL 2.11,Verify all servers are logging,This is the description of the control.
+ESA,CTL 2.12,Verify all firewall logs are logging to centralized logging application,This is the description of the control.
+ESA,CTL 2.13,Verify all firewall logs are logging to SIEM,This is the description of the control.
+ESA,CTL 2.14,Verify all AV logs are logging to centralized logging application,This is the description of the control.
+ESA,CTL 2.15,Verify all AV logs are logging to SIEM,This is the description of the control.
+ESA,CTL 2.16,Verify all server logs are logging to centralized logging application,This is the description of the control.
+ESA,CTL 2.17,Verify all server logs are logging to SIEM,This is the description of the control.
+ESA,CTL 2.18,Verify advanced endpoint controls,This is the description of the control.
+ESA,CTL 2.19,Verify removable media controls,This is the description of the control.
+ESA,CTL 2.20,Verify cloud services controls,This is the description of the control.
+ESA,CTL 2.21,Verify identity access controls,This is the description of the control.
+ESA,CTL 2.22,Verify Web content security controls/proxies,This is the description of the control.
+ESA,CTL 2.23,"Are file-integrity monitoring tools used to alert personnel to unauthorized modification of critical system files, configuration files, or content files and to configure the software to perform critical file comparisons at least weekly?",This is the description of the control.
+ESA,CTL 2.24,Verify 2FA password vault for privileged accounts,This is the description of the control.
+ESA,CTL 2.25,Verify honeypot controls,This is the description of the control.
+ESA,CTL 2.26,Verify honeyhash controls,This is the description of the control.
+ESA,CTL 2.27,Verify RDP proxy for privileged accounts,This is the description of the control.
+ESA,CTL 2.28,Verify encryption of business critical data at rest,This is the description of the control.
+ESA,BKUP 3.1,Do you routinely test your restore procedures?,This is the description of the control.
+ESA,BKUP 3.2,Verify media backups are stored in a secure location,This is the description of the control.
+ESA,BKUP 3.3,Verify that verification that backups are stored securily occurs at least annually,This is the description of the control.
+ESA,LOG 4.1,"Are security-related activities such as hardware configuration changes, software configuration changes, access attempts, and authorization and privilege assignments automatically logged?",This is the description of the control.
+ESA,LOG 4.2,Is there a process for routinely monitoring logs to detect unauthorized and anomalous activities?,This is the description of the control.
+ESA,LOG 4.3,Do you record your log reviews (recertification/attestation)?,This is the description of the control.
+ESA,LOG 4.4,Are steps taken to secure log data to prevent unauthorized access and tampering?,This is the description of the control.
+ESA,LOG 4.5,Do you regularly review administrative and operative access to audit logs?,This is the description of the control.
+ESA,LOG 4.6,"Do you have a process to ensure synchronization of system clocks with an authoritative source (e.g., via NTP) on a periodic basis commensurate with the potential risks?",This is the description of the control.
+ESA,MON 5.1,Do you have processes in place to monitor the utilization of key system resources and to mitigate the risk of system downtime?,This is the description of the control.
+ESA,MON 5.2,Do you continuously monitor your wired and wireless networks for unauthorized access?,This is the description of the control.
+ESA,MON 5.3,Do you employ specific measures to prevent and detect rogue access for all of your wireless LANs?,This is the description of the control.
+ESA,MON 5.4,Verify alert on process creation (4688),This is the description of the control.
+ESA,MON 5.5,Verify alert on powershell.exe execution,This is the description of the control.
+ESA,MON 5.6,Verify dedicated SOC,This is the description of the control.
+ESA,MON 5.7,Verify 24x7 SOC coverage,This is the description of the control.
+ESA,MON 5.8,Verify weekly analysis of threat events,This is the description of the control.
+ESA,MON 5.9,Verify L2+ Vulnerability Management process is feeding SIEM,This is the description of the control.
+ESA,IR 6.1,Verify documented IR framework,This is the description of the control.
+ESA,IR 6.2,"Are incident-handling procedures in place to report and respond to security events throughout the incident life cycle, including the definition of roles and responsibilities?",This is the description of the control.
+ESA,IR 6.3,Are your incident response staff aware of legal or compliance requirements surrounding evidence collection?,This is the description of the control.
+ESA,IR 6.4,Verify periodic IR tabletop exercises,This is the description of the control.
+ESA,IR 6.5,Verify process exists to handle malware infections,This is the description of the control.
+ESA,IR 6.6,Verify internal and/or 3rd party threat intelligence exists,This is the description of the control.
+ESA,IR 6.7,"Verify mature IR framework (RACI, all business unit participation) exists",This is the description of the control.
+ESA,IR 6.8,Verify threat modeling standard exists,This is the description of the control.
+ESA,IR 6.9,Verify periodic threat modeling exercises,This is the description of the control.
+ESA,IR 6.10,Verify threat prioritization standard exists,This is the description of the control.
+ESA,IR 6.11,Verify OOB communications process exists,This is the description of the control.
+ESA,IR 6.12,Verify communications rhythm exists with proper audience,This is the description of the control.
+ESA,IR 6.13,Verify incident tickets are being created in enterprise ticketing system,This is the description of the control.
+ESA,IR 6.14,Verify specific incident playbooks exist and are continuously updated,This is the description of the control.
+ESA,IR 6.15,Verify Emergency Incident Spend and Lever Execution Standard exists,This is the description of the control.
+ESA,THRT 7.1,Verify a basic 40 hour penetration test is performed annually,This is the description of the control.
+ESA,THRT 7.2,Verify a full scope red team test based on threat models and business critical data is performed annually,This is the description of the control.
+ESA,THRT 7.3,Verify a collaborative purple team engagement is performed annually,This is the description of the control.
+ESA,THRT 7.4,Verify Adversary Simulation exercises are performed at least annually,This is the description of the control.
+ESA,THRT 7.5,Verify Social Engineering campaigns are performed at least annually,This is the description of the control.
+ESA,THRT 7.6,Verify web application penetration test is performed annually,This is the description of the control.
+ESA,THRT 7.7,Verify organization has documented the likely threat community,This is the description of the control.
+ESA,THRT 7.8,Verify organization has documented threat capability levels,This is the description of the control.
+ESA,MTRC 8.1,Verify incident characteristics are being documented,This is the description of the control.
+ESA,MTRC 8.2,Verify target system characteristics are being documented,This is the description of the control.
+ESA,MTRC 8.3,Verify incident timeline is being documented,This is the description of the control.
+ESA,MTRC 8.4,Verify number of systems targeted is being documented,This is the description of the control.
+ESA,MTRC 8.5,Verify attack vector is being documented,This is the description of the control.
+ESA,MTRC 8.6,Verify attack sophistication is being documented,This is the description of the control.
+ESA,MTRC 8.7,Verify attack profile/characteristics are being documented,This is the description of the control.
+ESA,MTRC 8.8,Verify obfuscation techniques are being documented,This is the description of the control.
+ESA,MTRC 8.9,Verify data targeted is being documented,This is the description of the control.
+ESA,MTRC 8.10,Verify data compromised is being documented,This is the description of the control.
+ESA,MTRC 8.11,Verify data exfiltrated is being documented,This is the description of the control.
+ESA,MTRC 8.12,Verify periodic incidents by status metrics are being calculated,This is the description of the control.
+ESA,MTRC 8.13,Verify mean time to compromise metrics are being calculated,This is the description of the control.
+ESA,MTRC 8.14,Verify cost to disrupt (C2D) metrics are being calculated,This is the description of the control.
+ESA,MTRC 8.15,Verify adversary means and capabilities metrics are being calculated,This is the description of the control.
+ESA,MTRC 8.16,Verify delta between C2D and derived adversary means metrics are being calculated,This is the description of the control.
+ESA,MTRC 8.17,Verify mean time to incident detection is being calculated,This is the description of the control.
+ESA,MTRC 8.18,Verify mean time to incident resolution is being calculated,This is the description of the control.
+ESA,MTRC 8.19,Verify percentage of techniques detected by actor sophistication level,This is the description of the control.
+ESA,MTRC 8.20,Verify detection maturity over time is being tracked,This is the description of the control.

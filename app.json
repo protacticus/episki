@@ -1,0 +1,31 @@
+{
+    "name": "episki",
+    "description": "open source GRC",
+    "keywords": [
+        "episki"
+    ],
+    "website": "https://episki.org/",
+    "repository": "https://github.com/episki/episki",
+    "logo": "",
+    "success_url": "/",
+    "scripts": {
+        "postdeploy": "php bin/console doctrine:schema:create && php bin/console doctrine:fixtures:load -n",
+        "test-setup": "php bin/console doctrine:schema:create && php bin/console doctrine:fixtures:load -n",
+        "test": "phpunit"
+    },
+    "env": {
+        "SYMFONY_ENV": {
+            "value": "prod",
+            "description": ""
+        },
+        "SYMFONY_LOG": "php://stderr",
+        "SYMFONY_SECRET": {
+            "description": "Extra entropy for %kernel.secret%; used for CSRF tokens, cookies and signed URLs.",
+            "generator": "secret"
+        }
+    },
+    "addons": [
+        "heroku-postgresql"
+    ],
+    "image": "heroku/php"
+}

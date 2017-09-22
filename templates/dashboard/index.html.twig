@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block body_id 'dashboard' %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+	        {{ include('default/_flash_messages.html.twig') }}
+	
+			<h1>Dashboard</h1>
+		
+			<div class="container">
+				<div class="row">
+		        	<div class="col-sm-4">
+		             	<div class="panel panel-default">
+							<div class="panel-heading">Top Risks</div>
+							{{ render(controller('App\\Controller\\DashboardController:topRisks', {'limit': 10 })) }}
+						</div>
+		          	</div>
+		          	<div class="col-sm-4">
+		             	<div class="panel panel-default">
+							<div class="panel-heading">Assigned Findings</div>				
+							{{ render(controller('App\\Controller\\DashboardController:assignedFindings', {'limit': 10 })) }}
+						</div>
+		          	</div>
+		          	<div class="col-sm-4">
+		             	<div class="panel panel-default">
+							<div class="panel-heading">Assigned Controls</div>
+							{{ render(controller('App\\Controller\\DashboardController:assignedControls', {'limit': 10 })) }}
+						</div>
+		          	</div>
+	          	</div>
+			</div>
+{% endblock %}
+
+{% block sidebar %}
+
+{% endblock %}

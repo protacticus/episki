@@ -1,0 +1,18 @@
+<table class="table table-striped table-middle-aligned">
+    <thead>
+        <tr>
+            <th scope="col">Findings</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for finding in findings %}
+        <tr>
+            <td>{{ finding.title[:30] ~ '...' }}</td>
+        </tr>
+    {% else %}
+        <tr>
+            <td colspan="4" align="center">No risks</td>
+       </tr>
+    {% endfor %}
+    </tbody>
+</table>
