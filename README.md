@@ -17,8 +17,7 @@ Installation
 ------------
 
 First, install the [Symfony Installer](https://github.com/symfony/symfony-installer)
-if you haven't already. Then, install the Symfony Demo Application executing
-this command anywhere in your system:
+if you haven't already. Then, install the clone the repository to your machine:
 
 ```bash
 $ git clone https://github.com/episki/episki
@@ -46,7 +45,7 @@ There is no need to configure a virtual host in your web server to access the ap
 Just use the built-in web server:
 
 ```bash
-$ cd symfony_demo/
+$ cd episki/
 $ php bin/console server:run
 ```
 
@@ -61,6 +60,14 @@ terminal.
 > episki, configure it to point at the `web/` directory of the project.
 > For more details, see:
 > https://symfony.com/doc/current/cookbook/configuration/web_server_configuration.html
+
+Currently the user manage interface is through the `console` application. To add users to the 
+database you need execute the following:
+
+```bash
+$ cd episki/
+$ php bin/console episki:add-user
+```
 
 Troubleshooting
 ---------------
